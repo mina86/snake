@@ -1,3 +1,21 @@
+/*
+ * Snake, the game.
+ * Copyright (c) Michal Nazarewicz (mina86/AT/mina86.com)
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
 package com.mina86.snake;
 
 import java.awt.Font;
@@ -16,7 +34,7 @@ import javax.swing.JComponent;
  * Class representing map on which snake's is moving.
  *
  * @version 0.1
- * @author Michal "<a href="http://mina86.com/">mina86</a>" Nazarewicz (mina86/AT/tlen.pl)
+ * @author Michal "<a href="http://mina86.com/">mina86</a>" Nazarewicz (mina86/AT/mina86.com)
  */
 public final class Map {
 	/** Value donating map cell is free. */
@@ -38,7 +56,7 @@ public final class Map {
 	 * it's draw() method.
 	 *
 	 * @version 0.1
-	 * @author Michal "<a href="http://mina86.com/">mina86</a>" Nazarewicz (mina86/AT/tlen.pl)
+	 * @author Michal "<a href="http://mina86.com/">mina86</a>" Nazarewicz (mina86/AT/mina86.com)
 	 */
 	public final static class Item implements GFXBuffer.Drawable {
 		/** Position on map item is located. */
@@ -846,7 +864,7 @@ public final class Map {
 	 * centered whenever it's repainted.  Used to display the map.
 	 *
 	 * @version 0.1
-	 * @author Michal "<a href="http://mina86.com/">mina86</a>" Nazarewicz (mina86/AT/tlen.pl)
+	 * @author Michal "<a href="http://mina86.com/">mina86</a>" Nazarewicz (mina86/AT/mina86.com)
 	 */
 	public final static class Component extends JComponent {
 		/** Graphical buffer. */
