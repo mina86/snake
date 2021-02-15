@@ -30,7 +30,8 @@ import javax.swing.ComboBoxModel;
  * A wrapper around JComboBox class.  Has identical functionality but
  * supports changing selected item whith mouse wheel.
  */
-public class MComboBox extends JComboBox {
+@SuppressWarnings("serial")
+public class MComboBox extends JComboBox<String> {
 	/**
 	 * Creates a MComboBox with a default data model.  The default
 	 * data model is an empty list of objects. Use addItem to add
@@ -48,9 +49,10 @@ public class MComboBox extends JComboBox {
 	 * box model and may impact how the insert, remove and add methods
 	 * behave.
 	 *
-	 * @param aModel the ComboBoxModel that provides the displayed list of items
+	 * @param aModel the ComboBoxModel that provides the displayed list of
+	 *               items
 	 */
-	public MComboBox(ComboBoxModel aModel) {
+	public MComboBox(ComboBoxModel<String> aModel) {
 		super(aModel);
 		initMouseWheelListener();
 	}
@@ -62,7 +64,7 @@ public class MComboBox extends JComboBox {
 	 *
 	 * @param items an array of objects to insert into the combo box
 	 */
-	public MComboBox(Object[] items) {
+	public MComboBox(String[] items) {
 		super(items);
 		initMouseWheelListener();
 	}
@@ -74,7 +76,7 @@ public class MComboBox extends JComboBox {
 	 *
 	 * @param items an array of vectors to insert into the combo box
 	 */
-	public MComboBox(Vector<?> items) {
+	public MComboBox(Vector<String> items) {
 		super(items);
 		initMouseWheelListener();
 	}

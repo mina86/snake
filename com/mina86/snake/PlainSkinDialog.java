@@ -44,6 +44,7 @@ import javax.swing.event.ChangeListener;
  * @version 0.1
  * @author Michal "<a href="http://mina86.com/">mina86</a>" Nazarewicz (mina86/AT/mina86.com)
  */
+@SuppressWarnings("serial")
 public final class PlainSkinDialog extends JDialog implements ActionListener {
 	/** Slider for setting skin's size. */
 	private JSlider size;
@@ -81,14 +82,14 @@ public final class PlainSkinDialog extends JDialog implements ActionListener {
 		size.setPaintTicks(true);
 		size.setPaintLabels(true);
 		Hashtable<Integer, JLabel> hash = new Hashtable<Integer, JLabel>();
-		hash.put(new Integer(10), new JLabel("10"));
+		hash.put(10, new JLabel("10"));
 		size.setLabelTable(hash);
 
 		size.addChangeListener(new ChangeListener() {
 			public void stateChanged(ChangeEvent e) {
 				int val = size.getValue();
 				Hashtable<Integer, JLabel> hash = new Hashtable<Integer, JLabel>();
-				hash.put(new Integer(val), new JLabel("" + val));
+				hash.put(val, new JLabel("" + val));
 				size.setLabelTable(hash);
 			}
 			});

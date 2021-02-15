@@ -163,7 +163,7 @@ public final class Map {
 		 * @see GFXBuffer#draw(Point, Point)
 		 */
 		public void draw(GFXBuffer buf) {
-			buf.draw(point, buf.getSkin().imgItem(imgId, frame));
+			buf.draw(point, Skin.imgItem(imgId, frame));
 		}
 
 		/**
@@ -178,7 +178,7 @@ public final class Map {
 		 */
 		public void redraw(GFXBuffer buf) {
 			buf.clear(point);
-			buf.draw(point, buf.getSkin().imgItem(imgId, frame));
+			buf.draw(point, Skin.imgItem(imgId, frame));
 		}
 
 		/**
@@ -607,7 +607,7 @@ public final class Map {
 			ngb <<= 1;
 			ngb |= (byte)(get(point.transform(dir))==WALL ? 1 : 0);
 		}
-		buffer.redraw(wrapPoint(point), buffer.getSkin().imgWall(ngb));
+		buffer.redraw(wrapPoint(point), Skin.imgWall(ngb));
 	}
 
 	/**
@@ -866,6 +866,7 @@ public final class Map {
 	 * @version 0.1
 	 * @author Michal "<a href="http://mina86.com/">mina86</a>" Nazarewicz (mina86/AT/mina86.com)
 	 */
+	@SuppressWarnings("serial")
 	public final static class Component extends JComponent {
 		/** Graphical buffer. */
 		private GFXBuffer buffer;

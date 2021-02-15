@@ -43,6 +43,7 @@ import javax.swing.event.ChangeListener;
  * @version 0.1
  * @author Michal "<a href="http://mina86.com/">mina86</a>" Nazarewicz (mina86/AT/mina86.com)
  */
+@SuppressWarnings("serial")
 public final class DifficultyDialog extends JDialog
 	implements ActionListener, ChangeListener {
 	/** Check box showing whether food items never disappear. */
@@ -50,7 +51,7 @@ public final class DifficultyDialog extends JDialog
 	/** Ranges for a given property. */
 	private Range fCount, fDur, fVal, bCount, bDur;
 	/** Combo box for choosing preset. */
-	private JComboBox presets;
+	private JComboBox<String> presets;
 	/** Difficulty level values accessible after dialog is closed. */
 	private int values[] = null;
 	/** Identification of chosen preset or -1 if it's 'Custom'
@@ -132,9 +133,9 @@ public final class DifficultyDialog extends JDialog
 		bCount = makeRange(0, gridbag, c, 0, 500);
 
 		makeLabel(1, "Duration", gridbag, c);
-		fDur = makeRange(1, gridbag, c, new Integer(10), null, new Integer(10));
+		fDur = makeRange(1, gridbag, c, 10, null, 10);
 		makeLabel(1, "  ", gridbag, c);
-		bDur = makeRange(0, gridbag, c, new Integer(10), null, new Integer(10));
+		bDur = makeRange(0, gridbag, c, 10, null, 10);
 
 		makeLabel(1, "", gridbag, c);
 		fNeverDisappear = new JCheckBox("Never disappear");
@@ -163,7 +164,7 @@ public final class DifficultyDialog extends JDialog
 		for (int i = 0; i<GameConfiguration.configNames.length; ++i) {
 			names[i+1] = GameConfiguration.configNames[i];
 		}
-		presets = new JComboBox(names);
+		presets = new JComboBox<>(names);
 		panel.add(presets);
 
 		getRootPane().setDefaultButton(makeButton(panel, "OK", this));
@@ -291,8 +292,7 @@ public final class DifficultyDialog extends JDialog
 	 */
 	private Range makeRange(int gw, GridBagLayout gd,
 	                        GridBagConstraints c, int min, int max, int step) {
-		return makeRange(gw, gd, c, new Integer(min), new Integer(max),
-		                 new Integer(step));
+		return makeRange(gw, gd, c, min, max, step);
 	}
 
 	/*
@@ -312,8 +312,7 @@ public final class DifficultyDialog extends JDialog
 	 */
 	private Range makeRange(int gw, GridBagLayout gd,
 	                        GridBagConstraints c, int min, int max) {
-		return makeRange(gw, gd, c, new Integer(min), new Integer(max),
-		                 new Integer(1));
+		return makeRange(gw, gd, c, min, max, 1);
 	}
 
 	/*
@@ -332,7 +331,7 @@ public final class DifficultyDialog extends JDialog
 	 */
 	private Range makeRange(int gw, GridBagLayout gd,
 	                        GridBagConstraints c, int min) {
-		return makeRange(gw, gd, c, new Integer(min), null, new Integer(1));
+		return makeRange(gw, gd, c, min, null, 1);
 	}
 
 	/*

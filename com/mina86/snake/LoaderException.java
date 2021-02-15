@@ -28,6 +28,7 @@ package com.mina86.snake;
  * @version 0.1
  * @author Michal "<a href="http://mina86.com/">mina86</a>" Nazarewicz (mina86/AT/mina86.com)
  */
+@SuppressWarnings("serial")
 public final class LoaderException extends Exception {
 	/** Creats new exception with null message and no cause. */
 	public LoaderException() { }

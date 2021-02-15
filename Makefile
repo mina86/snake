@@ -5,7 +5,7 @@ CLASSPATH   = $(PWD)
 all: $(CLASSFILES)
 
 com/mina86/snake/%.class: com/mina86/snake/%.java
-	exec javac -classpath . -Xlint $<
+	exec javac -classpath . -Xlint:all -Werror $<
 
 run: all
 	exec java -classpath . com.mina86.snake.Main

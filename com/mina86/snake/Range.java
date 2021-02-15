@@ -39,6 +39,7 @@ import javax.swing.event.ChangeListener;
  * @version 0.1
  * @author Michal "<a href="http://mina86.com/">mina86</a>" Nazarewicz (mina86/AT/mina86.com)
  */
+@SuppressWarnings("serial")
 public final class Range extends JPanel implements ChangeListener {
 	/** Number model for the first field. */
 	private SpinnerNumberModel fromModel;
@@ -51,6 +52,7 @@ public final class Range extends JPanel implements ChangeListener {
 	/** Change listeners. */
 	private LinkedList<ChangeListener> listeners =
 		new LinkedList<ChangeListener>();
+	private static Integer ZERO = Integer.valueOf(0);
 
 	/**
 	 * Creates new component with given limits and step equal 1.
@@ -59,7 +61,7 @@ public final class Range extends JPanel implements ChangeListener {
 	 * @param max upper limit.
 	 */
 	public Range(Integer min, Integer max) {
-		this(min, max, new Integer(1));
+		this(min, max, 1);
 	}
 
 	/**
@@ -73,13 +75,15 @@ public final class Range extends JPanel implements ChangeListener {
 	public Range(Integer min, Integer max, Integer step) {
 		setLayout(new GridLayout(1, 2));
 
-		fromModel = new SpinnerNumberModel(min == null ? new Integer(0) : min,
-		                                   min, max, step);
+		fromModel = new SpinnerNumberModel(
+			min == null ? ZERO : min, min, max, step);
 		from = new JSpinner(fromModel);
 		from.addChangeListener(this);
 		add(from);
 
-		toModel = new SpinnerNumberModel(max == null ? min == null ? new Integer(0) : min : max, min, max, step);
+		toModel = new SpinnerNumberModel(
+			max == null ? min == null ? ZERO : min : max,
+			min, max, step);
 		to = new JSpinner(toModel);
 		to.addChangeListener(this);
 		add(to);
@@ -89,8 +93,8 @@ public final class Range extends JPanel implements ChangeListener {
 		if (f>t) {
 			throw new IllegalArgumentException();
 		}
-		from.setValue(new Integer(f));
-		to.setValue(new Integer(t));
+		from.setValue(f);
+		to.setValue(t);
 	}
 
 

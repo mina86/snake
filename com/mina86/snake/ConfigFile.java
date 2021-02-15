@@ -47,6 +47,7 @@ import java.util.zip.GZIPOutputStream;
  * @version 0.1
  * @author Michal "<a href="http://mina86.com/">mina86</a>" Nazarewicz (mina86/AT/mina86.com)
  */
+@SuppressWarnings("serial")
 public final class ConfigFile extends HashMap<String, String> {
 	/** File class representing loaded configuration file. */
 	private File file;

@@ -105,6 +105,7 @@ import javax.swing.UIManager;
  * @version 0.1
  * @author Michal "<a href="http://mina86.com/">mina86</a>" Nazarewicz (mina86/AT/mina86.com)
  */
+@SuppressWarnings("serial")
 public final class Main extends JFrame
 	implements WindowListener, ActionListener, KeyListener {
 
@@ -166,6 +167,10 @@ public final class Main extends JFrame
 	 * Constructor which creates frame, sets it visible and starts
 	 * auto game.
 	 */
+	/* KeyEvent.CTRL_MASK is deprecated but there’s seems to be no good
+	   replacement for the use in getKeyStroke so just silence the
+	   warning. */
+	@SuppressWarnings("deprecation")
 	private Main() {
 		super("Snake");
 

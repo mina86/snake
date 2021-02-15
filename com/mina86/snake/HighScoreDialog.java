@@ -29,6 +29,7 @@ import javax.swing.JLabel;
 
 
 
+@SuppressWarnings("serial")
 public final class HighScoreDialog extends JDialog implements ActionListener {
 	private JLabel labels[];
 	private MComboBox comboBox;
