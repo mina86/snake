@@ -52,6 +52,7 @@ public final class Range extends JPanel implements ChangeListener {
 	/** Change listeners. */
 	private LinkedList<ChangeListener> listeners =
 		new LinkedList<ChangeListener>();
+	/** Integer with value zero. */
 	private static Integer ZERO = Integer.valueOf(0);
 
 	/**
@@ -89,6 +90,14 @@ public final class Range extends JPanel implements ChangeListener {
 		add(to);
 	}
 
+	/**
+	 * Updates lower and upper limits.
+	 *
+	 * @param f the lower limit.
+	 * @param t the upper limit.
+	 * @throws IllegalArgumentException if lower limit is higher than the
+	 *         upper limit.
+	 */
 	public void set(int f, int t) {
 		if (f>t) {
 			throw new IllegalArgumentException();

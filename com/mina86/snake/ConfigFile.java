@@ -82,6 +82,8 @@ public final class ConfigFile extends HashMap<String, String> {
 	 * Loads and parses configuration file.
 	 *
 	 * @param path configuration file's path.
+	 * @throws IOException if input/output error occurs when trying to open
+	 *         the file.
 	 */
 	public ConfigFile(String path) throws IOException {
 		this(new File(path));

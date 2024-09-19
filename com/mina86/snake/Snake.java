@@ -213,7 +213,7 @@ public final class Snake extends AbstractCollection<Snake.Body> {
 	 * Returns snake's tail.
 	 *
 	 * @return snake's tail.
-	 *.
+	 */
 	public Body getTail() { return tail; }
 	/**
 	* Returns snake's length.

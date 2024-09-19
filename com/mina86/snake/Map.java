@@ -582,7 +582,7 @@ public final class Map {
 	 * @param point position of cell in question.
 	 * @throws CellOccupiedException if cell is already occupied.
 	 * @see #drawWall(Point)
-	 * @see #drawWalls().
+	 * @see #drawWalls()
 	 */
 	public void putWall(Point point) {
 		/* Wall need drawing *after* all walls are put */
