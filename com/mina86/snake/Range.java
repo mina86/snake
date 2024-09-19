@@ -99,20 +99,6 @@ public final class Range extends JPanel implements ChangeListener {
 
 
 	/**
-	 * Returns lower and upper limit entered in the component.
-	 *
-	 * @return 2-element array where first element is lower and second
-	 *         element is upper limit.
-	 */
-	public int[] get() {
-		int vals[] = new int[2];
-		vals[0] = getFrom();
-		vals[1] = getTo();
-		return vals;
-	}
-
-
-	/**
 	 * Returns lower limit entered by user.
 	 *
 	 * @return lower limit entered by user.
@@ -125,7 +111,6 @@ public final class Range extends JPanel implements ChangeListener {
 	 * @return upper limit entered by user.
 	 */
 	public int getTo() { return ((Integer)to.getValue()).intValue(); }
-
 
 
 	public void stateChanged(ChangeEvent e) {
@@ -170,6 +155,4 @@ public final class Range extends JPanel implements ChangeListener {
 		from.setEnabled(enabled);
 		to.setEnabled(enabled);
 	}
-
-
 }
