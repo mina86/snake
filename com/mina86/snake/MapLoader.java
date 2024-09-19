@@ -42,8 +42,8 @@ public final class MapLoader {
 	 *
 	 * @param path map file's path.
 	 * @return 2D boolean array representing map - free cells are
-	 *         donated by <tt>false</tt> values, and walls by
-	 *         <tt>true</tt>.
+	 *         donated by {@code false} values, and walls by
+	 *         {@code true}.
 	 * @throws LoaderException if file could not be read or it has
 	 *        invalid format.
 	 */
@@ -62,8 +62,8 @@ public final class MapLoader {
 	 *
 	 * @param file map file.
 	 * @return 2D boolean array representing map - free cells are
-	 *         donated by <tt>false</tt> values, and walls by
-	 *         <tt>true</tt>.
+	 *         donated by {@code false} values, and walls by
+	 *         {@code true}.
 	 * @throws LoaderException if file could not be read or it has
 	 *        invalid format.
 	 */
@@ -82,8 +82,8 @@ public final class MapLoader {
 	 *
 	 * @param map loaded config file.
 	 * @return 2D boolean array representing map - free cells are
-	 *         donated by <tt>false</tt> values, and walls by
-	 *         <tt>true</tt>.
+	 *         donated by {@code false} values, and walls by
+	 *         {@code true}.
 	 * @throws LoaderException if file has invalid format.
 	 */
 	public static boolean[][] load(ConfigFile map) throws LoaderException {

@@ -247,7 +247,7 @@ public final class GameConfiguration {
 
 	/**
 	 * Returns snake's speed.  At the moment snake's speed is defined
-	 * to be <tt>2.5 * move^(1/4)</tt> moves per second however in
+	 * to be {@code 2.5 * move^(1/4)} moves per second however in
 	 * future versions it can be coded to be configurable and to
 	 * depend on snake's length as well.
 	 *

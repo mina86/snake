@@ -83,14 +83,14 @@ public final class GameController implements Runnable {
 	 * performs the fllowing actions (donated by acion command):
 	 *
 	 * <ul>
-	 *  <li><tt>GAME FINISHED</tt> - when game has been finished,
+	 *  <li>{@code GAME FINISHED} - when game has been finished,
 	 *                               ie. snake died,
-	 *  <li><tt>GAME PAUSED</tt>   - when game has been paused,
-	 *  <li><tt>GAME RESUMING</tt> - when game is going to be resumed,
-	 *  <li><tt>GAME STARTING</tt> - when game is going to start,
-	 *  <li><tt>GAME STOPPED</tt>  - when game stopped and all threads
+	 *  <li>{@code GAME PAUSED}   - when game has been paused,
+	 *  <li>{@code GAME RESUMING} - when game is going to be resumed,
+	 *  <li>{@code GAME STARTING} - when game is going to start,
+	 *  <li>{@code GAME STOPPED}  - when game stopped and all threads
 	 *                               stopped,
-	 *  <li><tt>GAME UPDATED</tt>  - when map's state changed and needs
+	 *  <li>{@code GAME UPDATED}  - when map's state changed and needs
 	 *                               repainting.
 	 * </ul>
 	 *
@@ -279,7 +279,7 @@ public final class GameController implements Runnable {
 	/**
 	 * Main thread's body controlling snake's movements.  This method
 	 * runs while game's state is changed to STOPPED.  If it's changed
-	 * to FINISHED it performs a <tt>GAME FINISHED</tt> action and
+	 * to FINISHED it performs a {@code GAME FINISHED} action and
 	 * waits till it's RUNNING again.  Also, during the game, if it's
 	 * PAUSED it waits till it's RUNNING.
 	 */
@@ -300,7 +300,7 @@ public final class GameController implements Runnable {
 
 	/**
 	 * Paints next frame of item's animation.  If any item needed
-	 * update performs <tt>GAME UPDATE</tt> action.
+	 * update performs {@code GAME UPDATE} action.
 	 */
 	protected synchronized void nextFrame() {
 		if (map.nextFrame()) {

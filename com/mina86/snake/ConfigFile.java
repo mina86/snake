@@ -246,7 +246,7 @@ public final class ConfigFile extends HashMap<String, String> {
 
 	/**
 	 * Saves config file into the same file it was loaded from.  If
-	 * file name ends with <tt>.gz</tt> it will be compressed.
+	 * file name ends with {@code .gz} it will be compressed.
 	 *
 	 * @throws NullPointerException if there is no file asociated with
 	 *         this instance.
@@ -270,7 +270,7 @@ public final class ConfigFile extends HashMap<String, String> {
 
 	/**
 	 * Saves config file into given file.  If file name ends with
-	 * <tt>.gz</tt> it will be compressed.
+	 * {@code .gz} it will be compressed.
 	 *
 	 * @param path file's path
 	 * @throws NullPointerException if there is no file asociated with
@@ -283,7 +283,7 @@ public final class ConfigFile extends HashMap<String, String> {
 
 	/**
 	 * Saves config file into given file.  If file name ends with
-	 * <tt>.gz</tt> it will be compressed.
+	 * {@code .gz} it will be compressed.
 	 *
 	 * @param file file to save to
 	 * @throws NullPointerException if there is no file asociated with

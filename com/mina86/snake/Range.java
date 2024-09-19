@@ -30,8 +30,8 @@ import javax.swing.event.ChangeListener;
 
 /**
  * Component containing two fields for entering numbers such that
- * <tt>min &lt;= first_field &lt;= second_field &lt;= max</tt>, where
- * <tt>min</tt> and <tt>max</tt> are values defined when creating
+ * {@code min &lt;= first_field &lt;= second_field &lt;= max}, where
+ * {@code min} and {@code max} are values defined when creating
  * component.  Component uses two JSpinners components for allowing
  * users to enter numbers and modifies their SpinnerNumberModel when
  * any value is changed.

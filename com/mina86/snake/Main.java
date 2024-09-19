@@ -93,7 +93,7 @@ import javax.swing.UIManager;
  *
  * <p>GameController creates two threads: One for moving the snake and
  * one for animations.  Each time map needs to be redrawn it sends
- * Main object an <tt>GAME UPDATED</tt> action so that Main knows that
+ * Main object an {@code GAME UPDATED} action so that Main knows that
  * it needs to repain it's {@link Map.Component}.  On each move,
  * GameController calls {@link Snake#step(byte) Snake's step() method}
  * which behaves acordingly to the state of the map.  If snake steps
@@ -157,8 +157,8 @@ public final class Main extends JFrame
 	private JRadioButtonMenuItem miPresets[];
 	/** Current preset or -1 if no preset. */
 	private int preset = GameConfiguration.DEFAULT_CONFIG;
-	/** Map type. <tt>"plain"</tt> from plain map, <tt>"wall"</tt>
-	 * for wall, <tt>null</tt> for custom. */
+	/** Map type. {@code "plain"} from plain map, {@code "wall"}
+	 * for wall, {@code null} for custom. */
 	private String chosenMap = "plain";
 
 
@@ -592,7 +592,7 @@ public final class Main extends JFrame
 	/**
 	 * Returns list of scores for given map and difficulty preset.
 	 *
-	 * @param map map's name (<tt>"plain"</tt> or <tt>"wall"</tt>).
+	 * @param map map's name ({@code "plain"} or {@code "wall"}).
 	 * @param level difficulty level.
 	 * @return list of scores for given map.
 	 */
@@ -614,7 +614,7 @@ public final class Main extends JFrame
 	/**
 	 * Sets high scores for given map and difficulty.
 	 *
-	 * @param map map's name (<tt>"plain"</tt> or <tt>"wall"</tt>).
+	 * @param map map's name ({@code "plain"} or {@code "wall"}).
 	 * @param level difficulty level.
 	 * @param scores list of scores for given map.
 	 */
@@ -632,8 +632,8 @@ public final class Main extends JFrame
 
 
 	/**
-	 * Method run when {@link GameController} sends <tt>GAME
-	 * FINISHED</tt> action.
+	 * Method run when {@link GameController} sends {@code GAME FINISHED}
+	 * action.
 	 */
 	private void gameFinished() {
 		int points = game.getPoints();
@@ -737,7 +737,7 @@ public final class Main extends JFrame
 	public void windowClosed(WindowEvent e) { }
 
 	/**
-	 * Firs <tt>QUIT</tt> action event.  This way real work is done by
+	 * Firs {@code QUIT} action event.  This way real work is done by
 	 * the actionPerformed() method, so the code is not doubled.
 	 *
 	 * @param e WindowEvent object.
@@ -863,7 +863,7 @@ public final class Main extends JFrame
 	/**
 	 * Creates plain file chooser with directory set to current
 	 * working directory.  The directory used is taken from the
-	 * <tt>System.getProperty("user.dir")</tt>.
+	 * {@code System.getProperty("user.dir")}.
 	 *
 	 * @return JFileChooser object.
 	 */
@@ -880,7 +880,7 @@ public final class Main extends JFrame
 	/**
 	 * Creates file chooser with given file filter added and directory
 	 * set to current working directory.  The directory used is taken
-	 * from the <tt>System.getProperty("user.dir")</tt>.
+	 * from the {@code System.getProperty("user.dir")}.
 	 *
 	 * @param description file filter description.
 	 * @param ext file extension (without dot) to accept.

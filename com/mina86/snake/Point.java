@@ -59,11 +59,11 @@ public final class Point {
 	 * Creates new Point with given coordinates wrapped in given
 	 * rectangle.
 	 *
-	 * Wraping along given axis works according to the following
-	 * formula: <tt>exist k such that p' = p + k*d and p' is in [0,
-	 * d)</tt> where p is coordinate on given axis and d dimension.
-	 * In particular, if moving up makes you stap aoutside of the
-	 * rectangle you get put on the bottom, etc.
+	 * Wraping along given axis works according to the following formula:
+	 * {@code exist k such that p' = p + k*d and p' is in [0, d)} where p is
+	 * coordinate on given axis and d dimension.  In particular, if moving
+	 * up makes you stap aoutside of the rectangle you get put on the
+	 * bottom, etc.
 	 *
 	 * @param _x x coordinate.
 	 * @param _y y coordinate.

@@ -312,7 +312,7 @@ public final class Snake extends AbstractCollection<Snake.Body> {
 	/**
 	 * Removes snake's tail (that is shrinks it by one element).  This
 	 * method is equivalent to calling {@link #removeTail(int)} with
-	 * argument <tt>1</tt>.
+	 * argument {@code 1}.
 	 */
 	protected void removeTail() {
 		removeTail(1);
