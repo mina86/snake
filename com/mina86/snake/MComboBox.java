@@ -38,6 +38,7 @@ public class MComboBox extends JComboBox<String> {
 	 * items. By default the first item in the data model becomes
 	 * selected.
 	 */
+	@SuppressWarnings("this-escape")
 	public MComboBox() {
 		initMouseWheelListener();
 	}
@@ -52,6 +53,7 @@ public class MComboBox extends JComboBox<String> {
 	 * @param aModel the ComboBoxModel that provides the displayed list of
 	 *               items
 	 */
+	@SuppressWarnings("this-escape")
 	public MComboBox(ComboBoxModel<String> aModel) {
 		super(aModel);
 		initMouseWheelListener();
@@ -64,6 +66,7 @@ public class MComboBox extends JComboBox<String> {
 	 *
 	 * @param items an array of objects to insert into the combo box
 	 */
+	@SuppressWarnings("this-escape")
 	public MComboBox(String[] items) {
 		super(items);
 		initMouseWheelListener();
@@ -76,6 +79,7 @@ public class MComboBox extends JComboBox<String> {
 	 *
 	 * @param items an array of vectors to insert into the combo box
 	 */
+	@SuppressWarnings("this-escape")
 	public MComboBox(Vector<String> items) {
 		super(items);
 		initMouseWheelListener();
