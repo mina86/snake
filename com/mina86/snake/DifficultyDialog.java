@@ -275,25 +275,6 @@ public final class DifficultyDialog extends JDialog
 	}
 
 
-	/*
-	 * Creates Range component and adds it to dialog.
-	 *
-	 * @param gw widths of label or 0 meaning
-	 *           GridBagConstraints.REMAINDER.
-	 * @param gd GridBagLayout manager used by the dialog.
-	 * @param c GridBagConstraints used to add component.
-	 * @param min minimal value of Range component.
-	 * @param max maximal value of Range component.
-	 * @param step step value of Range component.
-	 * @return created Range component.
-	 * @see makeRange(int, GridBagLayout, GridBagConstraints, int, int),
-	 *      makeRange(int, GridBagLayout, GridBagConstraints, int),
-	 *      makeRange(int, GridBagLayout, GridBagConstraints, Integer, Integer, Integer)
-	 */
-	private Range makeRange(int gw, GridBagLayout gd,
-	                        GridBagConstraints c, int min, int max, int step) {
-		return makeRange(gw, gd, c, min, max, step);
-	}
 
 	/*
 	 * Creates Range with step equal one component and adds it to
@@ -306,32 +287,11 @@ public final class DifficultyDialog extends JDialog
 	 * @param min minimal value of Range component.
 	 * @param max maximal value of Range component.
 	 * @return created Range component.
-	 * @see makeRange(int, GridBagLayout, GridBagConstraints, int, int, int),
-	 *      makeRange(int, GridBagLayout, GridBagConstraints, int),
-	 *      makeRange(int, GridBagLayout, GridBagConstraints, Integer, Integer, Integer)
+	 * @see makeRange(int, GridBagLayout, GridBagConstraints, int, Integer, int)
 	 */
 	private Range makeRange(int gw, GridBagLayout gd,
 	                        GridBagConstraints c, int min, int max) {
 		return makeRange(gw, gd, c, min, max, 1);
-	}
-
-	/*
-	 * Creates Range with step equal one and no maximal value limit
-	 * component and adds it to dialog.
-	 *
-	 * @param gw widths of label or 0 meaning
-	 *           GridBagConstraints.REMAINDER.
-	 * @param gd GridBagLayout manager used by the dialog.
-	 * @param c GridBagConstraints used to add component.
-	 * @param min minimal value of Range component.
-	 * @return created Range component.
-	 * @see makeRange(int, GridBagLayout, GridBagConstraints, int, int),
-	 *      makeRange(int, GridBagLayout, GridBagConstraints, int, int),
-	 *      makeRange(int, GridBagLayout, GridBagConstraints, Integer, Integer, Integer)
-	 */
-	private Range makeRange(int gw, GridBagLayout gd,
-	                        GridBagConstraints c, int min) {
-		return makeRange(gw, gd, c, min, null, 1);
 	}
 
 	/*
@@ -345,13 +305,11 @@ public final class DifficultyDialog extends JDialog
 	 * @param max maximal value of Range component.
 	 * @param step step value of Range component.
 	 * @return created Range component.
-	 * @see makeRange(int, GridBagLayout, GridBagConstraints, int, int, int),
-	 *      makeRange(int, GridBagLayout, GridBagConstraints, int, int),
-	 *      makeRange(int, GridBagLayout, GridBagConstraints, int)
+	 * @see makeRange(int, GridBagLayout, GridBagConstraints, int, int)
 	 */
 	private Range makeRange(int gw, GridBagLayout gd,
 	                        GridBagConstraints c,
-	                        Integer min, Integer max, Integer step) {
+	                        int min, Integer max, int step) {
 		Range range = new Range(min, max, step);
 		c.gridwidth = gw == 0 ? GridBagConstraints.REMAINDER : gw;
 		gd.setConstraints(range, c);
@@ -359,7 +317,6 @@ public final class DifficultyDialog extends JDialog
 		range.addChangeListener(this);
 		return range;
 	}
-
 
 	/**
 	 * Creates new JButton and adds it to given panel.  Action command
